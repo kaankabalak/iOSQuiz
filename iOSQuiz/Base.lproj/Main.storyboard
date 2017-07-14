@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOSQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,60 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is the first step in iOS development?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yX8-pR-g8M">
+                                <rect key="frame" x="28" y="20" width="320" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJS-or-Mcp">
+                                <rect key="frame" x="327" y="48.5" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qh7-wz-s2Z"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Fo-m2-tOa">
+                                <rect key="frame" x="20" y="323.5" width="335" height="20.5"/>
+                                <string key="text">Create the user interface. As we create the UI, we will get a better understanding of our application. Then we breathe life into our application.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVb-TF-qMO">
+                                <rect key="frame" x="27" y="48.5" width="51" height="30"/>
+                                <state key="normal" title="Answer"/>
+                                <connections>
+                                    <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bEQ-8B-Xyp"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yX8-pR-g8M" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="0VE-Q7-pJX"/>
+                            <constraint firstItem="yX8-pR-g8M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="BoS-MI-jkQ"/>
+                            <constraint firstItem="qJS-or-Mcp" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="KEC-L1-bFC"/>
+                            <constraint firstItem="TVb-TF-qMO" firstAttribute="top" secondItem="yX8-pR-g8M" secondAttribute="bottom" constant="8" id="UDl-5l-CCA"/>
+                            <constraint firstItem="7Fo-m2-tOa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="UFa-eC-yR7"/>
+                            <constraint firstItem="qJS-or-Mcp" firstAttribute="baseline" secondItem="TVb-TF-qMO" secondAttribute="baseline" id="bn7-NM-fyz"/>
+                            <constraint firstItem="7Fo-m2-tOa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="f8u-gR-0HW"/>
+                            <constraint firstItem="qJS-or-Mcp" firstAttribute="top" secondItem="yX8-pR-g8M" secondAttribute="bottom" constant="8" id="hDX-UC-KMa"/>
+                            <constraint firstItem="7Fo-m2-tOa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oFp-f9-hbQ"/>
+                            <constraint firstItem="yX8-pR-g8M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rJk-qa-h0h"/>
+                            <constraint firstAttribute="trailing" secondItem="7Fo-m2-tOa" secondAttribute="trailing" constant="20" symbolic="YES" id="vHv-jn-ps8"/>
+                            <constraint firstItem="TVb-TF-qMO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="11" id="vNg-mo-z5c"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yX8-pR-g8M" secondAttribute="trailing" constant="11" id="xhN-E5-tqh"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="7Fo-m2-tOa" id="Reb-lE-sm6"/>
+                        <outlet property="questionLabel" destination="yX8-pR-g8M" id="u1D-es-alx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
         </scene>
     </scenes>
 </document>
